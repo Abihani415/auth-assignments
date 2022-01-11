@@ -1,0 +1,37 @@
+{
+  "name": "auth-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "npm run clean && babel server -d dist",
+    "lint": "eslint server",
+    "start": "npm run build && node dist/index.js",
+    "dev": "nodemon --exec babel-node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "csv-parse": "^5.0.4",
+    "csv-stringify": "^6.0.5",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
